@@ -6,8 +6,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var map = L.map('map', { zoomControl: false }).setView([51.505, -0.09], 13);
 
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+  L.tileLayer('https://webrd0{s}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}', {
+    attribution: '&copy; <a href="https://www.amap.com/">Gaode</a>',
+    subdomains: ['1','2','3','4'],
     maxZoom: 18
   }).addTo(map);
 
