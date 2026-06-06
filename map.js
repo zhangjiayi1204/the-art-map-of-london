@@ -6,11 +6,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var map = L.map('map', { zoomControl: false }).setView([51.505, -0.09], 13);
 
-  L.tileLayer('https://webrd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}', {
-    attribution: '&copy; Gaode',
-    maxZoom: 18,
-    referrerPolicy: 'no-referrer'
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
+    subdomains: 'abcd',
+    maxZoom: 19
   }).addTo(map);
+
+  setTimeout(function () { map.invalidateSize(); }, 200);
 
   var locations = [
     {

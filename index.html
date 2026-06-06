@@ -114,11 +114,13 @@
 
       var map = L.map('home-map', { zoomControl: false, scrollWheelZoom: false })
         .setView([51.505, -0.09], 13);
-      L.tileLayer('https://webrd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}', {
-        attribution: '&copy; Gaode',
-        maxZoom: 18,
-        referrerPolicy: 'no-referrer'
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; OSM &copy; CARTO',
+        subdomains: 'abcd',
+        maxZoom: 19
       }).addTo(map);
+
+      setTimeout(function () { map.invalidateSize(); }, 200);
 
       var spots = [
         { name: "St. Paul's Cathedral", i18n: 'map.stpauls', lat: 51.5138, lng: -0.0984, img: "StPaul's-Cathedral-1.jpg", link: "stpauls.html" },
