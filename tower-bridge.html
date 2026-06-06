@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Witness the opening of Tower Bridge through Wyllie's historic painting — a Victorian engineering marvel captured at its inauguration in 1894.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗺️</text></svg>">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tower Bridge — The Art Map of London</title>
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="music-player.css">
+  <link rel="stylesheet" href="locations.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+  <div class="artwork-container">
+    <div class="scroll-container">
+    <div class="artwork-frame">
+      <img loading="lazy" id="artwork" src="tower-bridge-1.jpg" alt="The Opening of Tower Bridge">
+    </div>
+    <div class="artwork-info">
+      <p><span data-i18n="tower.artwork_info">William Lionel Wyllie, 1851–1931, <strong>The Opening of Tower Bridge</strong>, 1894</span></p>
+      <div class="controls">
+        <button onclick="zoomIn()">+</button>
+        <button onclick="zoomOut()">−</button>
+        <button onclick="resetZoom()">↻</button>
+      </div>
+    </div>
+  </div>
+    </div>
+    <div class="content-sections">
+
+        <section id="tower-description" class="content-section">
+            <h2 data-i18n="tower.desc_title">Tower Bridge</h2>
+            <div class="section-content">
+                <div class="text-content">
+                    <p data-i18n="tower.desc_p">
+                        <strong>Tower Bridge</strong>, spanning the River Thames near the Tower of London, is one of the most recognisable landmarks in the world. Construction began in 1886 and the bridge was officially opened on 30 June 1894 by the Prince of Wales, later King Edward VII. A masterpiece of Victorian engineering, its distinctive twin towers and bascule mechanism — allowing the roadway to lift for passing ships — made it a symbol of Britain's industrial prowess at the height of the Empire.
+                    </p>
+                </div>
+                <div class="image-content">
+                    <img loading="lazy" src="tower-bridge-2.jpg" alt="Tower Bridge View">
+                </div>
+            </div>
+        </section>
+
+
+        <section id="artwork-analysis" class="content-section">
+            <h2 data-i18n="sec.analysis">Artwork Analysis and Historical Background</h2>
+            <p data-i18n="tower.analysis_p1">
+                <strong>Wyllie's</strong> <em>The Opening of Tower Bridge</em> is more than a landscape — it is a historical document. The painting captures the very moment the Prince of Wales's carriage crosses the newly opened bridge on 30 June 1894, surrounded by a flotilla of decorated vessels on the Thames and crowds gathered along the embankments. Wyllie, himself a master maritime painter, renders every detail — from the rigging of the ships to the pennants fluttering in the breeze — with the precision of a naval draughtsman and the warmth of a witness.
+            </p>
+            <p data-i18n="tower.analysis_p2">
+                <strong>The 1890s</strong> marked the zenith of Britain's industrial and imperial confidence. Tower Bridge was more than a traffic solution — it was a deliberate statement of engineering ambition, designed in a Gothic style to harmonise with the adjacent Tower of London yet built with cutting-edge hydraulic machinery. The opening ceremony drew tens of thousands of spectators. It was, in essence, Victorian London's Olympic moment: a city showing off what it could build, to itself and to the world.
+            </p>
+        </section>
+
+
+        <section id="artist-biography" class="content-section">
+            <h2 data-i18n="sec.biography">Artist Biography</h2>
+            <div class="section-content">
+                <div class="artist-image">
+                    <img loading="lazy" src="wyllie.jpg" alt="Wyllie Portrait">
+                </div>
+                <div class="text-content">
+                    <p data-i18n="tower.bio_p">
+                        <strong>William Lionel Wyllie</strong> (5 July 1851 – 6 April 1931) was a British maritime painter, etcher, and illustrator, widely regarded as one of the finest marine artists of his generation. Born into a family of painters in London, he studied at the Royal Academy Schools from the age of 12. Wyllie dedicated his career to capturing the life of Britain's waterways — naval battles, bustling ports, and the everyday rhythm of the Thames. His deep knowledge of ships and the sea, combined with a meticulous realist technique, made his work both artistically compelling and historically invaluable.
+                </div>
+            </div>
+        </section>
+
+
+        <section id="style-interpretation" class="content-section">
+            <h2 data-i18n="sec.style">Style Interpretation</h2>
+            <p data-i18n="tower.style_p">
+                <strong>Victorian Maritime Realism</strong> emerged from Britain's deep relationship with the sea as an island nation and imperial power. Maritime painters like Wyllie were not merely landscape artists — they were chroniclers of national identity. Every ship, crane, and pennant in Wyllie's work is rendered with technical accuracy, reflecting the Victorian conviction that observation and detail were the highest virtues in both science and art. Wyllie's paintings read as love letters to the machinery of empire — but also, in their attention to crowds and ordinary onlookers, as democratic tributes to the people who made that machinery run.
+            </p>
+        </section>
+    </div>
+
+     <div id="footer-placeholder"></div>
+
+    <script src="script.js"></script>
+  <script src="i18n.js"></script>
+  <script src="components.js"></script>
+  <script src="music-player.js"></script>
+</body>
+</html>

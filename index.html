@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover London through iconic artworks. Explore 6 landmark locations across 158 years of art history, from Canaletto to Ginner.">
+  <title>The Art Map of London</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗺️</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Literata&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="music-player.css"">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-text fade-in">
+      <div class="hero-grid">
+        <h2 data-i18n="hero.title">Discover London Through Art Insight</h2>
+        <div class="p-wrapper">
+          <p data-i18n="hero.locations">With <strong>7 Locations</strong></p>
+          <p data-i18n="hero.years">Across <strong>220 Years</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="introduction fade-in">
+    <div class="container">
+      <div class="intro-wrapper">
+        <div class="intro-content">
+          <h1 data-i18n="intro.heading">When Art Meets City</h1>
+          <p class="intro-line-1" data-i18n="intro.line1">Step into London through iconic artworks.</p>
+          <p class="intro-line-2" data-i18n="intro.line2">From Canaletto's St. Paul's Cathedral to Ginner's Piccadilly Circus, explore the city's landmarks and hidden corners.</p>
+          <p class="intro-line-3" data-i18n="intro.line3">Discover how each piece reflects London's history, culture, and evolving artistic styles with our interactive map and timeline.</p>
+          <p class="intro-line-4" data-i18n="intro.line4">Walk with us through a century of London, accompanied by music — if you will.</p>
+        </div>
+        <div class="intro-image">
+          <img src="waterloo-bridge-london-2.jpg" alt="Waterloo Bridge London" loading="lazy">
+          <p class="artwork-credit" data-i18n="intro.credit">Waterloo Bridge, Claude Monet, 1903</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-map-section">
+    <div class="home-map-header fade-in">
+      <h2 data-i18n="map.heading">Explore the Map</h2>
+      <p data-i18n="map.subtitle">Click any marker to see the artwork, or <a href="map.html">open the full map &rarr;</a></p>
+    </div>
+    <div class="map-wrapper">
+      <div id="home-map"></div>
+      <div class="custom-zoom">
+        <button id="zoom-in" title="Zoom in">+</button>
+        <button id="zoom-out" title="Zoom out">−</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="slider-section fade-in">
+    <h2 data-i18n="carousel.heading">"Museum" From 18th to 20th Century</h2>
+    <div class="carousel-wrapper">
+      <button class="carousel-btn prev" aria-label="Previous slide">&#10094;</button>
+      <div class="slider-container">
+        <div class="slider-item">
+          <a href="stpauls.html"><img src="StPaul's-Cathedral-1.jpg" alt="St. Paul's Cathedral artwork" loading="lazy"></a>
+          <p data-i18n="carousel.stpauls">St. Paul's Cathedral</p>
+        </div>
+        <div class="slider-item">
+          <a href="greenwich.html"><img src="greenwich-1.jpg" alt="Greenwich artwork" loading="lazy"></a>
+          <p data-i18n="carousel.greenwich">Greenwich</p>
+        </div>
+        <div class="slider-item">
+          <a href="chelsea.html"><img src="chelsea-1.jpg" alt="Chelsea artwork" loading="lazy"></a>
+          <p data-i18n="carousel.chelsea">Chelsea</p>
+        </div>
+        <div class="slider-item">
+          <a href="hyde-park.html"><img src="hyde-Park-1.jpg" alt="Hyde Park artwork" loading="lazy"></a>
+          <p data-i18n="carousel.hydepark">Hyde Park</p>
+        </div>
+        <div class="slider-item">
+          <a href="house-of-parliament.html"><img src="houses-of-parliament.jpg" alt="Palace of Westminster artwork" loading="lazy"></a>
+          <p data-i18n="carousel.westminster">Palace of Westminster</p>
+        </div>
+        <div class="slider-item">
+          <a href="tower-bridge.html"><img src="tower-bridge-1.jpg" alt="Tower Bridge artwork" loading="lazy"></a>
+          <p data-i18n="carousel.towerbridge">Tower Bridge</p>
+        </div>
+        <div class="slider-item">
+          <a href="piccadilly.html"><img src="piccadilly-cirsus.jpg" alt="Piccadilly Circus artwork" loading="lazy"></a>
+          <p data-i18n="carousel.piccadilly">Piccadilly Circus</p>
+        </div>
+      </div>
+      <button class="carousel-btn next" aria-label="Next slide">&#10095;</button>
+    </div>
+    <div class="carousel-dots"></div>
+  </section>
+
+  <section class="music-teaser fade-in">
+    <p data-i18n="home.music_teaser">Each landmark is paired with a piece of classical music that echoes its spirit — walk with us, and listen.</p>
+    <a href="music-gallery.html" class="teaser-link" data-i18n="home.music_link">Explore Music Gallery →</a>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    (function () {
+      var container = document.getElementById('home-map');
+      if (!container) return;
+
+      var map = L.map('home-map', { zoomControl: false, scrollWheelZoom: false })
+        .setView([51.505, -0.09], 13);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OSM',
+        maxZoom: 18
+      }).addTo(map);
+
+      var spots = [
+        { name: "St. Paul's Cathedral", i18n: 'map.stpauls', lat: 51.5138, lng: -0.0984, img: "StPaul's-Cathedral-1.jpg", link: "stpauls.html" },
+        { name: "Greenwich", i18n: 'map.greenwich', lat: 51.4769, lng: -0.0005, img: "greenwich-1.jpg", link: "greenwich.html" },
+        { name: "Chelsea", i18n: 'map.chelsea', lat: 51.4875, lng: -0.1686, img: "chelsea-1.jpg", link: "chelsea.html" },
+        { name: "Hyde Park", i18n: 'map.hydepark', lat: 51.5073, lng: -0.1657, img: "hyde-Park-1.jpg", link: "hyde-park.html" },
+        { name: "Palace of Westminster", i18n: 'map.westminster', lat: 51.4995, lng: -0.1248, img: "houses-of-parliament.jpg", link: "house-of-parliament.html" },
+        { name: "Piccadilly Circus", i18n: 'map.piccadilly', lat: 51.5101, lng: -0.1340, img: "piccadilly-cirsus.jpg", link: "piccadilly.html" },
+        { name: "Tower Bridge", i18n: 'map.towerbridge', lat: 51.5055, lng: -0.0754, img: "tower-bridge-1.jpg", link: "tower-bridge.html" }
+      ];
+
+      function buildHomePopup(s) {
+        var name = (window.i18n_t && window.i18n_t(s.i18n)) || s.name;
+        var viewText = (window.i18n_t && window.i18n_t('map.view')) || 'View details →';
+        return '<div style="text-align:center;min-width:160px;">' +
+          '<img loading="lazy" src="' + s.img + '" alt="' + s.name + '" style="width:100%;max-height:90px;object-fit:cover;border-radius:4px;margin-bottom:6px;">' +
+          '<strong style="font-size:0.9rem;">' + name + '</strong><br>' +
+          '<a href="' + s.link + '" style="font-size:0.8rem;">' + viewText + '</a></div>';
+      }
+
+      spots.forEach(function (s) {
+        var marker = L.marker([s.lat, s.lng]).addTo(map);
+        marker.bindPopup(buildHomePopup(s), { maxWidth: 220 });
+        marker.on('popupopen', function () { marker.setPopupContent(buildHomePopup(s)); });
+      });
+
+      document.getElementById('zoom-in').addEventListener('click', function () { map.zoomIn(); });
+      document.getElementById('zoom-out').addEventListener('click', function () { map.zoomOut(); });
+    })();
+  </script>
+  <script src="components.js"></script>
+  <script src="music-player.js""></script>
+  <script src="i18n.js"></script>
+  <script src="home-1.js"></script>
+</body>
+</html>

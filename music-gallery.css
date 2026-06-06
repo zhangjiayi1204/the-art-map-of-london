@@ -1,0 +1,156 @@
+/* ============================================
+   music-gallery.css
+   ============================================ */
+
+body, html {
+  margin: 0; padding: 0;
+  font-family: 'Literata Regular', serif;
+  background: var(--bg-primary, #fff);
+  color: var(--text-primary, #333);
+}
+
+/* --- Hero --- */
+.music-hero {
+  text-align: center;
+  padding: 140px 2rem 60px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.music-hero h1 {
+  font-family: 'Italiana', serif;
+  font-size: 3rem;
+  margin-bottom: 0.6rem;
+  color: var(--text-primary, #333);
+}
+.music-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary, #666);
+  line-height: 1.7;
+}
+
+/* --- Gallery layout --- */
+.music-gallery {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 2rem 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* --- Card --- */
+.music-card {
+  background: var(--bg-secondary, #f9f9f9);
+  border: 1px solid var(--border-light, #eee);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: var(--card-shadow, 0 2px 8px rgba(0,0,0,0.06));
+}
+.music-card h2 {
+  font-family: 'Italiana', serif;
+  font-size: 1.3rem;
+  margin: 1rem 0 1.4rem;
+  color: var(--text-primary, #333);
+}
+
+/* --- Card header (badge + play) --- */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-badge {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: var(--bg-tertiary, #f8f9fa);
+  border: 1px solid var(--border, #ccc);
+  border-radius: 6px;
+  padding: 4px 12px;
+  color: var(--text-secondary, #666);
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.card-badge:hover {
+  background: var(--border-light, #eee);
+}
+
+/* --- Play button --- */
+.play-btn {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid var(--text-primary, #333);
+  background: transparent;
+  color: var(--text-primary, #333);
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+}
+.play-btn:hover { background: var(--text-primary, #333); color: var(--bg-primary, #fff); }
+.play-btn.playing { background: var(--text-primary, #333); color: var(--bg-primary, #fff); }
+
+/* --- Card layout with image --- */
+.has-image .card-layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2rem;
+  margin-top: 1rem;
+  align-items: start;
+}
+.card-image img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  aspect-ratio: 4/3;
+}
+.has-image h2 { margin-top: 0; }
+
+/* --- Text sections --- */
+.card-body { margin-top: 1rem; }
+.card-section { margin-bottom: 1.2rem; }
+.card-section:last-child { margin-bottom: 0; }
+.label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted, #999);
+  display: block;
+  margin-bottom: 0.3rem;
+}
+.card-section p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-primary, #333);
+  margin: 0;
+}
+
+/* --- Fade-in --- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .music-hero { padding-top: 120px; }
+  .music-hero h1 { font-size: 2.2rem; }
+  .has-image .card-layout {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .card-image img { aspect-ratio: 16/9; max-height: 200px; }
+}
+
+@media (max-width: 480px) {
+  .music-gallery { padding: 0 1rem 60px; gap: 2rem; }
+  .music-card { padding: 1.2rem; }
+  .music-card h2 { font-size: 1.1rem; }
+}

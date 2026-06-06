@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Art Map of London — Music Gallery. Discover the classical pieces paired with each landmark artwork.">
+  <title data-i18n="music.page_title">Music Gallery — The Art Map of London</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎵</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Literata&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="music-gallery.css">
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <section class="music-hero fade-in">
+    <h1 data-i18n="music.heading">Music Gallery</h1>
+    <p class="music-subtitle" data-i18n="music.subtitle">Each landmark, each era, each painting — paired with a piece of music that echoes its spirit.</p>
+  </section>
+
+  <section class="music-gallery">
+
+    <!-- ============ 1. Home ============ -->
+    <article class="music-card fade-in" data-entry="home">
+      <div class="card-header">
+        <a class="card-badge" href="index.html" data-i18n="music.badge.home">Home</a>
+        <button class="play-btn" data-track="debussy-clair-de-lune.m4a" aria-label="Play">▶</button>
+      </div>
+      <h2 data-i18n="music.home.title">Clair de Lune — Claude Debussy (1905)</h2>
+      <div class="card-body">
+        <div class="card-section"><span class="label" data-i18n="music.label.reason">Why this piece</span><p data-i18n="music.home.reason"></p></div>
+        <div class="card-section"><span class="label" data-i18n="music.label.background">Creation background</span><p data-i18n="music.home.background"></p></div>
+        <div class="card-section"><span class="label" data-i18n="music.label.style">Style resonance</span><p data-i18n="music.home.style"></p></div>
+      </div>
+    </article>
+
+    <!-- ============ 2. St Paul's ============ -->
+    <article class="music-card has-image fade-in" data-entry="stpauls">
+      <div class="card-header">
+        <a class="card-badge" href="stpauls.html" data-i18n="music.badge.stpauls">St. Paul's Cathedral</a>
+        <button class="play-btn" data-track="handel-water-music.m4a" aria-label="Play">▶</button>
+      </div>
+      <div class="card-layout">
+        <div class="card-image"><img src="canaletto.jpg" alt="St. Paul's Cathedral" loading="lazy"></div>
+        <div class="card-text">
+          <h2 data-i18n="music.stpauls.title">Water Music: Overture — George Frideric Handel (1717)</h2>
+          <div class="card-section"><span class="label" data-i18n="music.label.reason">Why this piece</span><p data-i18n="music.stpauls.reason"></p></div>
+          <div class="card-section"><span class="label" data-i18n="music.label.background">Creation background</span><p data-i18n="music.stpauls.background"></p></div>
+          <div class="card-section"><span class="label" data-i18n="music.label.style">Style resonance</span><p data-i18n="music.stpauls.style"></p></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ============ 3. Greenwich ============ -->
+    <article class="music-card has-image fade-in" data-entry="greenwich">
+      <div class="card-header">
+        <a class="card-badge" href="greenwich.html" data-i18n="music.badge.greenwich">Greenwich</a>
+        <button class="play-btn" data-track="beethoven-pastoral.m4a" aria-label="Play">▶</button>
+      </div>
+      <div class="card-layout">
+        <div class="card-image"><img src="greenwich-1.jpg" alt="Greenwich" loading="lazy"></div>
+        <div class="card-text">
+          <h2 data-i18n="music.greenwich.title">Symphony No. 6 "Pastoral" — Ludwig van Beethoven (1808)</h2>
+          <div class="card-section"><span class="label" data-i18n="music.label.reason">Why this piece</span><p data-i18n="music.greenwich.reason"></p></div>
+          <div class="card-section"><span class="label" data-i18n="music.label.background">Creation background</span><p data-i18n="music.greenwich.background"></p></div>
+          <div class="card-section"><span class="label" data-i18n="music.label.style">Style resonance</span><p data-i18n="music.greenwich.style"></p></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ============ 4. Chelsea ============ -->
+    <article class="music-card has-image fade-in" data-entry="chelsea">
+      <div class="card-header">
+        <a class="card-badge" href="chelsea.html" data-i18n="music.badge.chelsea">Chelsea</a>
+        <button class="play-btn" data-track="debussy-clair-de-lune.m4a" aria-label="Play">▶</button>
+      </div>
+      <div class="card-layout">
+        <div class="card-image"><img src="chelsea-1.jpg" alt="Chelsea" loading="lazy"></div>
+        <div class="card-text">
+          <h2 data-i18n="music.chelsea.title">Clair de Lune — Claude Debussy (1905)</h2>
+          <div class="card-section"><span class="label" data-i18n="music.label.reason">Why this piece</span><p data-i18n="music.chelsea.reason"></p></div>
+          <div class="card-section"><span class="label" data-i18n="music.label.background">Creation background</span><p data-i18n="music.chelsea.background"></p></div>
+          <div class="card-section"><span class="label" data-i18n="music.label.style">Style resonance</span><p data-i18n="music.chelsea.style"></p></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ============ 5. Hyde Park ============ -->
+    <article class="music-card has-image fade-in" data-entry="hydepark">
+      <div class="card-header">
+        <a class="card-badge" href="hyde-park.html" data-i18n="music.badge.hydepark">Hyde Park</a>
+        <button class="play-btn" data-track="debussy-arabesque.m4a" aria-label="Play">▶</button>
+      </div>
+      <div class="card-layout">
+        <div class="card-image"><img src="hyde-Park-1.jpg" alt="Hyde Park" loading="lazy"></div>
+        <div class="card-text">
+          <h2 data-i18n="music.hydepark.title">Arabesque No. 1 — Claude Debussy (1891)</h2>
+          <div class="card-section"><span class="label" data-i18n="music.label.reason">Why this piece</span><p data-i18n="music.hydepark.reason"></p></div>
+          <div class="card-section"><span class="label" data-i18n="music.label.background">Creation background</span><p data-i18n="music.hydepark.background"></p></div>
+          <div class="card-section"><span class="label" data-i18n="music.label.style">Style resonance</span><p data-i18n="music.hydepark.style"></p></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ============ 6. Westminster ============ -->
+    <article class="music-card has-image fade-in" data-entry="westminster">
+      <div class="card-header">
+        <a class="card-badge" href="house-of-parliament.html" data-i18n="music.badge.westminster">Palace of Westminster</a>
+        <button class="play-btn" data-track="satie-gymnopedie.m4a" aria-label="Play">▶</button>
+      </div>
+      <div class="card-layout">
+        <div class="card-image"><img src="houses-of-parliament.jpg" alt="Palace of Westminster" loading="lazy"></div>
+        <div class="card-text">
+          <h2 data-i18n="music.westminster.title">Gymnopedie No. 1 — Erik Satie (1888)</h2>
+          <div class="card-section"><span class="label" data-i18n="music.label.reason">Why this piece</span><p data-i18n="music.westminster.reason"></p></div>
+          <div class="card-section"><span class="label" data-i18n="music.label.background">Creation background</span><p data-i18n="music.westminster.background"></p></div>
+          <div class="card-section"><span class="label" data-i18n="music.label.style">Style resonance</span><p data-i18n="music.westminster.style"></p></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ============ 7. Piccadilly ============ -->
+    <article class="music-card has-image fade-in" data-entry="piccadilly">
+      <div class="card-header">
+        <a class="card-badge" href="piccadilly.html" data-i18n="music.badge.piccadilly">Piccadilly Circus</a>
+        <button class="play-btn" data-track="offenbach-orpheus.m4a" aria-label="Play">▶</button>
+      </div>
+      <div class="card-layout">
+        <div class="card-image"><img src="piccadilly-cirsus.jpg" alt="Piccadilly Circus" loading="lazy"></div>
+        <div class="card-text">
+          <h2 data-i18n="music.piccadilly.title">Orpheus in the Underworld — Jacques Offenbach (1858)</h2>
+          <div class="card-section"><span class="label" data-i18n="music.label.reason">Why this piece</span><p data-i18n="music.piccadilly.reason"></p></div>
+          <div class="card-section"><span class="label" data-i18n="music.label.background">Creation background</span><p data-i18n="music.piccadilly.background"></p></div>
+          <div class="card-section"><span class="label" data-i18n="music.label.style">Style resonance</span><p data-i18n="music.piccadilly.style"></p></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ============ 8. Tower Bridge ============ -->
+    <article class="music-card has-image fade-in" data-entry="tower">
+      <div class="card-header">
+        <a class="card-badge" href="tower-bridge.html" data-i18n="music.badge.tower">Tower Bridge</a>
+        <button class="play-btn" data-track="rossini-william-tell.m4a" aria-label="Play">▶</button>
+      </div>
+      <div class="card-layout">
+        <div class="card-image"><img src="tower-bridge-1.jpg" alt="Tower Bridge" loading="lazy"></div>
+        <div class="card-text">
+          <h2 data-i18n="music.tower.title">William Tell Overture — Gioachino Rossini (1829)</h2>
+          <div class="card-section"><span class="label" data-i18n="music.label.reason">Why this piece</span><p data-i18n="music.tower.reason"></p></div>
+          <div class="card-section"><span class="label" data-i18n="music.label.background">Creation background</span><p data-i18n="music.tower.background"></p></div>
+          <div class="card-section"><span class="label" data-i18n="music.label.style">Style resonance</span><p data-i18n="music.tower.style"></p></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ============ 9. Timeline ============ -->
+    <article class="music-card fade-in" data-entry="timeline">
+      <div class="card-header">
+        <a class="card-badge" href="timeline.html" data-i18n="music.badge.timeline">Timeline</a>
+        <button class="play-btn" data-track="holst-jupiter.m4a" aria-label="Play">▶</button>
+      </div>
+      <h2 data-i18n="music.timeline.title">The Planets: Jupiter — Gustav Holst (1916)</h2>
+      <div class="card-body">
+        <div class="card-section"><span class="label" data-i18n="music.label.reason">Why this piece</span><p data-i18n="music.timeline.reason"></p></div>
+        <div class="card-section"><span class="label" data-i18n="music.label.background">Creation background</span><p data-i18n="music.timeline.background"></p></div>
+        <div class="card-section"><span class="label" data-i18n="music.label.style">Style resonance</span><p data-i18n="music.timeline.style"></p></div>
+      </div>
+    </article>
+
+    <!-- ============ 10. Map ============ -->
+    <article class="music-card fade-in" data-entry="map">
+      <div class="card-header">
+        <a class="card-badge" href="map.html" data-i18n="music.badge.map">Map</a>
+        <button class="play-btn" data-track="offenbach-orpheus.m4a" aria-label="Play">▶</button>
+      </div>
+      <h2 data-i18n="music.map.title">Orpheus in the Underworld — Jacques Offenbach (1858)</h2>
+      <div class="card-body">
+        <div class="card-section"><span class="label" data-i18n="music.label.reason">Why this piece</span><p data-i18n="music.map.reason"></p></div>
+        <div class="card-section"><span class="label" data-i18n="music.label.background">Creation background</span><p data-i18n="music.map.background"></p></div>
+        <div class="card-section"><span class="label" data-i18n="music.label.style">Style resonance</span><p data-i18n="music.map.style"></p></div>
+      </div>
+    </article>
+
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="components.js"></script>
+  <script src="i18n.js"></script>
+  <script src="music-gallery.js"></script>
+</body>
+</html>

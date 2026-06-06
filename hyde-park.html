@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Explore Hyde Park through Monet's Impressionist eye — capturing London's beloved green space in shifting light.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗺️</text></svg>">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hyde Park</title>
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="music-player.css"">
+  <link rel="stylesheet" href="locations.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+  <div class="artwork-container">
+    <div class="scroll-container">
+    <div class="artwork-frame">
+      <img loading="lazy" id="artwork" src="hyde-Park-1.jpg" alt="The Serpentine, Hyde Park, Fog Effect">
+    </div>
+    <div class="artwork-info">
+      <p><span data-i18n="hydepark.artwork_info">Camille Pissaro, 1830–1903, <strong>The Serpentine, Hyde Park, Fog Effect</strong>, ca. 1890</span></p>
+      <div class="controls">
+        <button onclick="zoomIn()">+</button>
+        <button onclick="zoomOut()">−</button>
+        <button onclick="resetZoom()">↻</button>
+      </div>
+    </div>
+  </div>
+    </div>
+    <div class="content-sections">
+       
+        <section id="greenwich-description" class="content-section">
+            <h2 data-i18n="hydepark.desc_title">Hyde Park</h2>
+            <div class="section-content">
+                <div class="text-content">
+                    <p>
+                        <span data-i18n="hydepark.desc_p"><strong>Hyde Park</strong> is a large royal park located in the city center of London, covering approximately 142 hectares. It is one of London's most famous parks and one of the most well-known urban parks in the world. It is one of the four royal parks in London, the other three being St James's Park, Kensington Gardens, and Regent's Park.</span> 
+                    </p>
+                </div>
+                <div class="image-content">
+                    <img loading="lazy" src="hyde-park-2.jpg" alt="Hyde park View">
+                </div>
+            </div>
+        </section>
+
+  
+        <section id="artwork-analysis" class="content-section">
+            <h2 data-i18n="sec.analysis">Artwork Analysis and Historical Background</h2>
+            <p data-i18n="hydepark.analysis_p1">
+                This painting depicts the tranquil and diffused scene of the Serpentine in Hyde Park, shrouded in mist. The soft, muted tones, combined with the pointillist technique—where small, distinct dots of color are applied in patterns to form the image—evoke a sense of calm and serenity. A group of ducks in the foreground gently disturbs the water, creating ripples that break the stillness of the lake. The figures in the middle ground are ambiguous, possibly obscured by the mist. The background gradually fades into the haze, with trees and architectural forms becoming nearly indistinguishable. Pissarro's careful handling of the fog effect not only conveys the moisture-laden air but also imparts a fleeting, ethereal beauty to the scene, capturing the transience of both time and weather.  
+            </p>
+            <p data-i18n="hydepark.analysis_p2">
+                <strong>Under Queen Victoria's reign in the 19th century</strong>, Britain experienced rapid industrialization and urbanization. During this period, public parks became increasingly important as spaces for citizens to relax, unwind, and connect with nature. The Victorian era placed a strong emphasis on urban greening and the beautification of public spaces, and Hyde Park, as one of London's major parks, received special attention and maintenance. Throughout the Victorian period, Hyde Park underwent several significant transformations, with the most notable being the reconstruction of the Serpentine Lake in the 1860s, which turned the lake into a popular venue for public recreation and leisure. 
+            </p>
+        </section>
+
+
+        <section id="artist-biography" class="content-section">
+            <h2 data-i18n="sec.biography">Artist Biography</h2>
+            <div class="section-content">
+                <div class="artist-image">
+                    <img loading="lazy" src="pissarro.jpg" alt="Pissarro Portrait">
+                </div>
+                <div class="text-content">
+                    <p data-i18n="hydepark.bio_p">
+                        <strong>Camille Pissarro</strong> (July 10, 1830 – November 13, 1903) was a French Impressionist painter and one of the important figures of both Impressionism and Post-Impressionism. He studied art in Paris and was influenced by the Barbizon School. His works cover themes such as rural landscapes, urban scenes, and everyday life. His painting style evolved over time, initially influenced by Impressionism with loose brushstrokes and bright colors, and later moving toward the color-blocking technique and more structured style of Post-Impressionism. 
+                </div>
+            </div>
+        </section>
+
+
+        <section id="style-interpretation" class="content-section">
+            <h2 data-i18n="sec.style">Style Interpretation</h2>
+            <p data-i18n="hydepark.style_p">
+                <strong>Pointillism</strong> is a painting technique that originated in the late 19th century as part of Post-Impressionism, developed by French artists Georges Seurat and Paul Signac. The characteristic of Pointillism is the use of small, precise dots of color (usually a single hue) arranged in a systematic pattern on the canvas to create rich color and light effects, instead of using traditional brushstrokes or mixed pigments. This technique is based on color theory, particularly the relationship of complementary colors on the color wheel. In Pointillist works, the color dots are typically not blended together, but placed side by side, allowing the viewer's eyes to naturally blend them from a distance, resulting in vibrant visual effects and bright color sensations. 
+            </p>
+        </section>
+    </div>
+    
+     <div id="footer-placeholder"></div>
+
+    <script src="script.js"></script>
+  <script src="i18n.js"></script>
+  <script src="components.js"></script>
+  <script src="music-player.js""></script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+/* ============================================
+   locations.css — Location page specific styles
+   ============================================ */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding-top: 80px;
+  overflow-x: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+* { box-sizing: border-box; }
+
+/* --- Artwork Display --- */
+.artwork-container {
+  width: 100%;
+  text-align: center;
+}
+
+.artwork-frame {
+  width: 1200px;
+  max-width: 95vw;
+  height: 600px;
+  border: 5px solid #000;
+  background-color: #000;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.artwork-frame img {
+  max-width: 100%;
+  max-height: 100%;
+  transform-origin: center;
+  transition: transform 0.3s ease;
+  user-select: none;
+  -webkit-user-drag: none;
+  touch-action: none;
+}
+
+.artwork-info {
+  margin-top: 10px;
+}
+
+.artwork-info p {
+  font-size: 1.2rem;
+  line-height: 1;
+  margin: 1rem 0;
+}
+
+/* Zoom Controls */
+.controls button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  margin: 0 5px;
+  border-radius: 5px;
+  transition: background 0.2s;
+}
+
+.controls button:hover {
+  background-color: #555;
+}
+
+/* Scroll container for artwork */
+.scroll-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  cursor: grab;
+  user-select: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scroll-container:active {
+  cursor: grabbing;
+}
+
+/* --- Content Sections --- */
+.content-sections {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 50px;
+  background-color: #f8f8f8;
+}
+
+.content-section {
+  margin-top: 30px;
+  padding: 20px 30px;
+  background-color: #ffffff;
+  color: #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.content-section h2 {
+  font-size: 2rem;
+  font-family: 'Italiana', serif;
+  text-align: center;
+  margin-bottom: 15px;
+  grid-column: 1 / -1;
+}
+
+.content-section p,
+.content-section .text-content {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  font-family: 'Literata', serif;
+  text-align: justify;
+}
+
+.content-section .section-content {
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.content-section .image-content {
+  width: 100%;
+  height: auto;
+}
+
+.content-section .image-content img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Artist Biography Layout */
+#artist-biography .section-content {
+  display: grid;
+  grid-template-columns: 3fr 10fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+#artist-biography .artist-image {
+  width: 100%;
+  height: auto;
+}
+
+#artist-biography .artist-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+#artist-biography .text-content {
+  padding-top: 0;
+}
+
+.artwork-container + .content-sections {
+  margin-top: 30px;
+}
+
+.content-section + .content-section {
+  margin-top: 30px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1200px) {
+  .artwork-frame { width: 100%; height: auto; max-height: 500px; }
+  .content-sections { padding: 20px; }
+  .content-section { padding: 15px; }
+  .content-section h2 { font-size: 1.8rem; }
+  .content-section p { font-size: 1.2rem; }
+}
+
+@media (max-width: 992px) {
+  .artwork-frame { width: 100%; height: auto; max-height: 400px; }
+  .content-sections { padding: 15px; }
+  .content-section { padding: 10px; }
+  .content-section h2 { font-size: 1.5rem; }
+  .content-section p { font-size: 1.1rem; }
+  .content-section .section-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  #artist-biography .section-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  #artist-biography .artist-image {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  body { padding-top: 60px; }
+  .artwork-frame { width: 100%; height: auto; max-height: 300px; }
+  .artwork-info p { font-size: 1rem; }
+  .content-sections { padding: 10px; max-width: 100%; }
+  .content-section { padding: 10px; }
+  .content-section h2 { font-size: 1.4rem; }
+  .content-section p { font-size: 1rem; text-align: left; }
+  .content-section .section-content {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  #artist-biography .section-content {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  #artist-biography .artist-image {
+    max-width: 160px;
+    margin: 0 auto;
+  }
+  .controls button { padding: 8px; font-size: 16px; }
+}
+
+@media (max-width: 480px) {
+  body { padding-top: 50px; }
+  .artwork-frame { width: 100%; height: auto; max-height: 250px; }
+  .artwork-info p { font-size: 0.9rem; }
+  .content-sections { padding: 8px; }
+  .content-section { padding: 8px; }
+  .content-section h2 { font-size: 1.2rem; }
+  .content-section p { font-size: 0.9rem; }
+  .content-section .section-content {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+  #artist-biography .section-content {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+  #artist-biography .artist-image {
+    max-width: 140px;
+    margin: 0 auto;
+  }
+}
+
+/* --- Dark Mode --- */
+[data-theme="dark"] body {
+  background-color: #0d0d0d;
+}
+[data-theme="dark"] .content-sections {
+  background-color: #1a1a1a;
+}
+[data-theme="dark"] .content-section {
+  background-color: #252525;
+  color: var(--text-primary);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+[data-theme="dark"] .content-section h2 {
+  color: var(--text-primary);
+}
+[data-theme="dark"] .content-section p,
+[data-theme="dark"] .content-section .text-content {
+  color: #ccc;
+}
+[data-theme="dark"] .artwork-frame {
+  border-color: #333;
+}
+[data-theme="dark"] .controls button {
+  background-color: #444;
+}
+[data-theme="dark"] .controls button:hover {
+  background-color: #666;
+}

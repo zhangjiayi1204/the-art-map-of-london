@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="See the Palace of Westminster through art — a timeless landmark rendered by master painters across centuries.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗺️</text></svg>">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Palace of Westminster</title>
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="music-player.css"">
+  <link rel="stylesheet" href="locations.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+  <div class="artwork-container">
+    <div class="scroll-container">
+    <div class="artwork-frame">
+      <img loading="lazy" id="artwork" src="houses-of-parliament.jpg" alt="The Houses of Parliament">
+    </div>
+    <div class="artwork-info">
+      <p><span data-i18n="westminster.artwork_info">Claude Monet, 1840–1926, <strong>Houses of Parliament</strong>, ca. 1900-1901</span></p>
+      <div class="controls">
+        <button onclick="zoomIn()">+</button>
+        <button onclick="zoomOut()">−</button>
+        <button onclick="resetZoom()">↻</button>
+      </div>
+    </div>
+  </div>
+    </div>
+    <div class="content-sections">
+       
+        <section id="westminster-description" class="content-section">
+            <h2 data-i18n="westminster.desc_title">The Palace of Westminster</h2>
+            <div class="section-content">
+                <div class="text-content">
+                    <p>
+                        <span data-i18n="westminster.desc_p"><strong>The Houses of Parliament</strong>, officially known as <strong>the Palace of Westminster</strong>, is located on the west bank of the River Thames in central London and serves as the seat of the UK Parliament. It is a symbol of British political power with a history dating back to the 11th century when it was originally a royal palace for English monarchs. By the 16th century, it had gradually transitioned into a parliamentary venue. After the original building was destroyed by fire in 1834, the current Gothic Revival structure was designed by architect Charles Barry and decorative artist Augustus Pugin, and completed in the mid-19th century. As the meeting place for the House of Commons and the House of Lords, its iconic features include the towering Elizabeth Tower (commonly known as Big Ben) and the elegant Victoria Tower, making it one of London’s most famous landmarks.</span> 
+                    </p>
+                </div>
+                <div class="image-content">
+                    <img loading="lazy" src="houses-of-parliament-1.jpg" alt="Palace of Westminster View">
+                </div>
+            </div>
+        </section>
+
+  
+        <section id="artwork-analysis" class="content-section">
+            <h2 data-i18n="sec.analysis">Artwork Analysis and Historical Background</h2>
+            <p data-i18n="westminster.analysis_p1">
+                In the autumn of 1899 and early 1900 and 1901, <strong>Claude Monet</strong> stayed in London and created nearly 100 Impressionist paintings depicting various views of the Thames. Among these, one series focused on the Houses of Parliament. All the paintings in this series were composed from Monet’s window or the terrace of St. Thomas’ Hospital, capturing the interplay of the building with the river, fog, and changing sunlight. By utilizing the foreground of the water and the distant sky, Monet enhanced the depth of his compositions, conveying the flow of light and color in a more subjective and emotional manner, imbuing the industrialized city with a sense of poetic timelessness. 
+            </p>
+            <p data-i18n="westminster.analysis_p2">
+                Since the <strong>early 19th century</strong>, coal became the backbone of major European cities, powering industrial engines and, especially in Britain, heating households. The resulting smoke filled the air, yet artists of the time approached pollution and its visual effects from a different perspective. For Monet, the industrial haze was a kind of aesthetic blessing for Impressionist experimentation. 
+            </p>
+        </section>
+
+
+        <section id="artist-biography" class="content-section">
+            <h2 data-i18n="sec.biography">Artist Biography</h2>
+            <div class="section-content">
+                <div class="artist-image">
+                    <img loading="lazy" src="monet.jpg" alt="Monet Portrait">
+                </div>
+                <div class="text-content">
+                    <p data-i18n="westminster.bio_p">
+                        <strong>Claude Monet </strong>(November 14, 1840 – December 5, 1926) was a French painter and a founder of the Impressionist movement. Known for his focus on light and color, he revolutionized art with his outdoor scenes and unique techniques, a particular focus on the changing landscapes of gardens, rivers, and buildings at different times of the day and across seasons. Influenced by the Barbizon school, his work Impression, Sunrise (1872) gave the movement its name. Monet's later years were spent in Giverny, where his garden and water lily pond inspired many of his masterpieces. He is regarded as the "poet of light and color." 
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="style-interpretation" class="content-section">
+            <h2 data-i18n="sec.style">Style Interpretation</h2>
+            <p data-i18n="westminster.style_p">
+                <strong>Impressionism</strong>, an art movement that originated in France in the late 19th century, focused on capturing light, color, and the transient visual effects of a moment, rather than traditional detailed representations. Artists drew inspiration directly from nature, often painting outdoors to capture the changing effects of light on natural scenes, expressing the spontaneity and fluidity of the natural world. Key figures of Impressionism include Claude Monet, Pierre-Auguste Renoir, and Edgar Degas. The movement is characterized by loose brushstrokes, bright colors, and an emphasis on light and shadow. By breaking from traditional painting rules, Impressionists sought to depict "impressions" of the world, creating a visual language centered on light, shadow, and color that radically transformed Western art. 
+            </p>
+        </section>
+    </div>
+    
+     <div id="footer-placeholder"></div>
+
+    <script src="script.js"></script>
+  <script src="i18n.js"></script>
+  <script src="components.js"></script>
+  <script src="music-player.js""></script>
+</body>
+</html>
