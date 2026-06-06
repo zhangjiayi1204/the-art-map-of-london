@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   L.tileLayer('https://webrd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}', {
     attribution: '&copy; Gaode',
-    maxZoom: 18
+    maxZoom: 18,
+    referrerPolicy: 'no-referrer'
   }).addTo(map);
 
   var locations = [

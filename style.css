@@ -113,6 +113,7 @@ body, html {
 [lang="zh-CN"] .hero-grid h2 {
   font-size: 5.3rem;
   line-height: 1.35;
+  margin-left: 2.5rem;
 }
 
 [lang="zh-CN"] .hero-grid .p-wrapper p {
