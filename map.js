@@ -6,13 +6,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var map = L.map('map', { zoomControl: false }).setView([51.505, -0.09], 13);
 
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
-    subdomains: 'abcd',
-    maxZoom: 19
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap',
+    maxZoom: 19,
+    crossOrigin: true
   }).addTo(map);
 
-  setTimeout(function () { map.invalidateSize(); }, 200);
+  // Force Leaflet to recalculate container size
+  setTimeout(function () { map.invalidateSize(); }, 100);
+  window.addEventListener('resize', function () { map.invalidateSize(); });
 
   var locations = [
     {

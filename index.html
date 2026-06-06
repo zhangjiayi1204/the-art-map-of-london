@@ -114,13 +114,14 @@
 
       var map = L.map('home-map', { zoomControl: false, scrollWheelZoom: false })
         .setView([51.505, -0.09], 13);
-      L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-        attribution: '&copy; OSM &copy; CARTO',
-        subdomains: 'abcd',
-        maxZoom: 19
+      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap',
+        maxZoom: 19,
+        crossOrigin: true
       }).addTo(map);
 
-      setTimeout(function () { map.invalidateSize(); }, 200);
+      setTimeout(function () { map.invalidateSize(); }, 100);
+      window.addEventListener('resize', function () { map.invalidateSize(); });
 
       var spots = [
         { name: "St. Paul's Cathedral", i18n: 'map.stpauls', lat: 51.5138, lng: -0.0984, img: "StPaul's-Cathedral-1.jpg", link: "stpauls.html" },
